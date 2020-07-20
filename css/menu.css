@@ -1,0 +1,87 @@
+/* PARA CELULAR Y TABLETA */
+
+#menu-bar {
+    display: none;
+    }
+
+header label {
+    /*para que flote */
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer;
+}
+menu .contenedor a, h1{
+    color: white;
+    text-decoration: none;
+}
+.menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(51,51,51,0.9);
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+.menu a{
+    display: block;
+    color: #fff;
+    height: 58px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgb(255,255,255,0.5);
+}
+.menu a:hover {
+    background: rgb(255,255,255,0.3);
+}
+#menu-bar:checked ~ .menu {
+    transform: translateX(0%);
+}
+.appwhatsapp {
+    position: fixed;
+    right: 26px;
+    bottom: 100px;
+    width: 60px;
+    z-index: 1000;
+}
+.appwhatsapp img{
+    width: 100%;
+    height: auto;
+}
+
+/* PARA ESCRITORIO (PARTIR DE 1024PX) */
+@media (min-width:1024px){
+    .menu {
+        position: static;
+        width: auto;
+        height: 28px;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+    }
+    
+    /* PARA QUITAR EL BORDE BLANCO QUE SE LE HABÍA DADO */
+    .menu a {
+        border: none;
+    }
+    
+    /* PARA QUE APAREZCA EL MENU y DESAPAREZCA EL BOTÓN DE MENÚ */
+    header label {
+        display: none;   
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
